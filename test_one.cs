@@ -1,6 +1,6 @@
 //prompt the user to input their name and birthdate
 using System;
-using System.Globalization;
+
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -56,9 +56,7 @@ using System.Text.RegularExpressions;
         int age = CalculateAge(birthdate);
         Console.WriteLine($"Hello, {name}! You are {age} years old.");
 
-        //  Save user's information to a file named "info.txt"
-        string info = $"Name: {name}\nBirthdate: {birthdate.ToShortDateString()}\nAge: {age} years old";
-        File.WriteAllText("info.txt", info);
+       
 
         //  Read and display the contents of the "info.txt" file
         Console.WriteLine("\nContents of info.txt:");
